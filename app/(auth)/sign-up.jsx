@@ -1,26 +1,26 @@
-import { useState } from "react";
-import { Link, router } from "expo-router";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { View, Text, ScrollView, Dimensions, Alert, Image } from "react-native";
+import { useState } from 'react';
+import { Link, router } from 'expo-router';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { View, Text, ScrollView, Dimensions, Alert, Image } from 'react-native';
 
-import { images } from "../../constants";
-import { createUser } from "../../lib/appwrite";
-import { CustomButton, FormField } from "../../components";
-import { useGlobalContext } from "../../context/GlobalProvider";
+import { images } from '../../constants';
+import { createUser } from '../../lib/appwrite';
+import { CustomButton, FormField } from '../../components';
+import { useGlobalContext } from '../../context/GlobalProvider';
 
 const SignUp = () => {
   const { setUser, setIsLogged } = useGlobalContext();
 
   const [isSubmitting, setSubmitting] = useState(false);
   const [form, setForm] = useState({
-    username: "",
-    email: "",
-    password: "",
+    username: '',
+    email: '',
+    password: '',
   });
 
   const submit = async () => {
-    if (form.username === "" || form.email === "" || form.password === "") {
-      Alert.alert("Error", "Please fill in all fields");
+    if (form.username === '' || form.email === '' || form.password === '') {
+      Alert.alert('Error', 'Please fill in all fields');
     }
 
     setSubmitting(true);
@@ -29,9 +29,9 @@ const SignUp = () => {
       setUser(result);
       setIsLogged(true);
 
-      router.replace("/home");
+      router.replace('/home');
     } catch (error) {
-      Alert.alert("Error", error.message);
+      Alert.alert('Error', error.message);
     } finally {
       setSubmitting(false);
     }
@@ -43,7 +43,7 @@ const SignUp = () => {
         <View
           className="w-full flex justify-center h-full px-4 my-6"
           style={{
-            minHeight: Dimensions.get("window").height - 100,
+            minHeight: Dimensions.get('window').height - 100,
           }}
         >
           <Image

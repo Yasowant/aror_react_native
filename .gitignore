@@ -1,0 +1,76 @@
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+.pnpm-debug.log
+
+# Metro bundler cache
+metro-cache/
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*.swn
+*.bak
+*.backup
+
+# Build artifacts
+android/app/build/
+ios/Pods/
+ios/build/
+ios/.symlinks/
+ios/.tmp/
+
+# Xcode files
+*.xcworkspace
+*.xcuserdata/
+*.xccheckout
+*.DS_Store
+
+# Android files
+*.keystore
+/android/.gradle
+/android/app/debug.keystore
+/android/app/release.keystore
+/android/key.properties
+/android/local.properties
+/android/app/src/main/assets/index.android.bundle
+
+# React Native Debugger & Cache
+__react-native-debugger__
+.expo/
+.expo-shared/
+.env
+
+# Babel & ESLint
+.babelrc
+.eslintcache
+
+# VSCode settings
+.vscode/
+
+# CocoaPods
+ios/Pods/
+ios/.symlinks/
+ios/build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# Google Service Files
+android/app/google-services.json
+ios/GoogleService-Info.plist
+
+# Firebase Crashlytics
+android/app/src/main/assets/crashlytics-build.properties
+firebase-debug.log
